@@ -407,7 +407,17 @@ async function solarSystem(){
 }
 solarSystem();
 function displaySolarSystem(data){
-    let box = `<div id="planets-grid" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 xl:grid-cols-8 gap-3 md:gap-4 mb-8 md:mb-12">`;
+    let box = `
+    <div class="mb-4 md:mb-6">
+        <h2 class="text-xl md:text-2xl font-space font-bold mb-1">
+            Explore Our Solar System
+        </h2>
+        <p class="text-slate-400 text-xs md:text-sm">
+            Discover the planets, moons, and celestial bodies in our cosmic neighborhood
+        </p>
+    </div>
+    <div id="planets-grid" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 xl:grid-cols-8 gap-3 md:gap-4 mb-8 md:mb-12">`;
+
 for(let i = 0; i< data.bodies.length ; i++){
     box +=`
     <div
